@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default async function Projects() {
     const DATABASE_ID = process.env.NOTION_DATABASE_ID;
     const TOKEN = process.env.NOTION_TOKEN;
@@ -37,7 +39,7 @@ export default async function Projects() {
                 {/* Left side: Image and Project Name */}
                 <div className={`md:w-1/3 mb-4 md:mb-0 ${index % 2 === 1 ? 'order-last md:order-first' : ''}`}>
                   {project.cover?.external?.url ? (
-                    <img
+                    <Image
                       src={project.cover.external.url}
                       alt={project.properties.Name.title[0]?.text.content}
                       className="w-full h-64 object-cover rounded-lg shadow-md"

@@ -2,14 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+/* Import Local Fonts */
+@font-face {
+  font-family: 'Karla';
+  src: url('/fonts/Karla-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('/fonts/Karla-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('/fonts/Karla-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('/fonts/Karla-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
 
 /* Global Font Setup */
 body {
   font-family: 'Karla', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  @apply antialiased;
 }
 
-/* Karla Font Classes with Variable Weights */
+/* Karla Font Classes */
 .karla-light {
   font-family: 'Karla', sans-serif;
   font-weight: 200;
@@ -35,30 +65,34 @@ body {
   font-style: italic;
 }
 
-
+/* Dark Mode Variables */
 :root {
-  /* Your default theme */
   --background: white;
   --foreground: black;
 }
 
 [data-theme='dark'] {
-  --background: black;
+  --background: #121212;
   --foreground: white;
 }
 
-.bg-primary{
-  @apply bg-white dark:bg-black;
+/* Utility Classes */
+.bg-primary {
+  @apply bg-white dark:bg-[#121212];
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-slate-900 dark:text-white;
+  @apply text-gray-900 dark:text-white;
 }
 
 .header {
-  @apply fixed top-0 w-full z-50 shadow-md backdrop-blur-md bg-white/50 dark:bg-[#121212]/50;
+  @apply fixed top-0 w-full z-50 shadow-md backdrop-blur-md bg-white/70 dark:bg-[#121212]/70;
 }
 
-.footer{
-  @apply bg-white dark:bg-black;
+.footer {
+  @apply bg-white dark:bg-[#121212] py-8;
+}
+
+hr {
+  @apply border-t border-gray-300 dark:border-gray-700 my-8;
 }
