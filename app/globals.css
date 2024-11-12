@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* Global Font Setup */
+body {
+  font-family: 'Karla', sans-serif;
+}
+
+/* Karla Font Classes with Variable Weights */
+.karla-light {
+  font-family: 'Karla', sans-serif;
+  font-weight: 200;
+}
+
+.karla-regular {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+}
+
+.karla-bold {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+}
+
+.karla-extrabold {
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+}
+
+.karla-italic {
+  font-family: 'Karla', sans-serif;
+  font-style: italic;
+}
+
+
 /* Import Local Fonts */
 @font-face {
   font-family: 'Karla';
