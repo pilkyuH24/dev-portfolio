@@ -31,14 +31,15 @@ export default function AboutMe() {
       {/* Text Section */}
       <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:w-1/2 space-y-6">
         <h1 className="text-6xl font-bold text-gray-900 dark:text-white mb-10 mt-14">
-          Hello, I'm Pilkyu Han
+          Hello, I&apos;m Pilkyu Han
         </h1>
         <p className="text-2xl text-gray-700 dark:text-gray-300 leading-relaxed">
-          I'm Pilkyu Han, originally from South Korea and a graduate of UC
+          I&apos;m Pilkyu Han, originally from South Korea and a graduate of UC
           Berkeley with a degree in Electrical Engineering and Computer Science.
-          I’m passionate about using technology to solve real-world problems and
-          create practical solutions.
+          I&apos;m passionate about using technology to solve real-world
+          problems and create practical solutions.
         </p>
+
         <ol className="text-2xl space-y-2 py-10">
           <li>🚀 - Passionate about embracing new technologies </li>
           <li>🎨 - Enjoys creating innovative and fun projects</li>
