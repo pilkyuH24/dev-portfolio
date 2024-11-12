@@ -1,14 +1,10 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
 const nextConfig = {
   reactStrictMode: true,
   images: {
-      domains: [
-          'www.notion.so',
-          'images.unsplash.com',
-          's3.us-west-2.amazonaws.com'
-      ],
-      format: ['image/png', 'image/webp', 'image/jpeg']
-  }
-}
+    domains: ['www.notion.so', 'images.unsplash.com', 's3.us-west-2.amazonaws.com'],
+    formats: ['image/avif', 'image/webp'],
+  },
+};
 
-module.exports = nextConfig
+export default nextConfig;
