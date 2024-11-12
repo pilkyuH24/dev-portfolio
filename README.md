@@ -15,8 +15,15 @@ This portfolio is designed to provide an elegant and responsive user experience.
 ## 🔧 Technologies Used
 This project utilizes the following tools and technologies:
 
-- **Next.js**: A powerful React framework for building optimized and scalable web applications.
-- **Tailwind CSS**: Utility-first CSS framework for styling and responsive design.
+- **Next.js**
+- **Tailwind CSS**
 - **Notion API**: Fetching project data dynamically from a Notion database.
-- **Dark Mode**: Implemented using the `next-themes` library for a better user experience.
-- **Lottie Animations**: Engaging animations to enhance the visual appeal.
+- **Dotenv**: Managing environment variables securely.
+- **Dark Mode**: Implemented using the `next-themes` library.
+- **Lottie Animations**
+
+## 📁 Environment Variables
+Create a `.env` file in the root of your project and include the following:
+
+
+Make sure to replace `your_notion_token_here` and `your_database_id_here` with your actual Notion credentials.
