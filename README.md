@@ -18,9 +18,12 @@ This project utilizes the following tools and technologies:
 - **Next.js**
 - **Tailwind CSS**
 - **Notion API**: Fetching project data dynamically from a Notion database.
-NOTION_TOKEN=
-NOTION_DATABASE_ID=
-- - **Dotenv**
+- **Dotenv**: Managing environment variables securely.
 - **Dark Mode**: Implemented using the `next-themes` library.
 - **Lottie Animations**
 
+## 📁 Environment Variables
+Create a `.env` file in the root of your project and include the following:
+
+
+Make sure to replace `your_notion_token_here` and `your_database_id_here` with your actual Notion credentials.
