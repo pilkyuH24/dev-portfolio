@@ -40,7 +40,7 @@ export default function AboutMe() {
           problems and create practical solutions.
         </p>
 
-        <ol className="text-2xl space-y-2 py-10">
+        <ol className="text-2xl space-y-2 py-10 dark:text-white">
           <li>🚀 - Passionate about embracing new technologies </li>
           <li>🎨 - Enjoys creating innovative and fun projects</li>
           <li>☕ - Coffee lover</li>

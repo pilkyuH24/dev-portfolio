@@ -2,26 +2,30 @@ import Image from "next/image";
 import AboutMe from "./about-me";
 import Skills from "./skills";
 import Projects from "./projects";
-import Contatcts from "./contacts"
+import Contact from "./contacts";
 
 export default function Home() {
   return (
     <div>
       {/* About Me Section */}
+      <section id="about-me">
         <AboutMe />
-        <hr className="border-t my-8 mx-auto w-4/5" />
+      </section>
 
-        {/* Skills Section */}
+      {/* Skills Section */}
+      <section id="skills" className="">
         <Skills />
-        <hr className="border-t my-8 mx-auto w-4/5" />
+      </section>
 
-        {/* Projects Section */}
+      {/* Projects Section */}
+      <section id="projects">
         <Projects />
-        <hr className="border-t my-8 mx-auto w-4/5" />
+      </section>
 
-        {/* Contacts Section */}
-        <Contatcts />
-
+      {/* Contacts Section */}
+      <section id="contacts">
+        <Contact />
+      </section>
     </div>
   );
 }

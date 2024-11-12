@@ -74,29 +74,16 @@ body {
 }
 
 /* Karla Font Classes */
-.karla-light {
-  font-family: 'Karla', sans-serif;
-  font-weight: 200;
-}
-
-.karla-regular {
-  font-family: 'Karla', sans-serif;
+@font-face {
+  font-family: 'Karla';
+  src: url('/fonts/Karla-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
-.karla-bold {
-  font-family: 'Karla', sans-serif;
+@font-face {
+  font-family: 'Karla';
+  src: url('/fonts/Karla-Bold.ttf') format('truetype');
   font-weight: 700;
-}
-
-.karla-extrabold {
-  font-family: 'Karla', sans-serif;
-  font-weight: 800;
-}
-
-.karla-italic {
-  font-family: 'Karla', sans-serif;
-  font-style: italic;
 }
 
 /* Dark Mode Variables */
@@ -124,9 +111,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
-  @apply bg-white dark:bg-[#121212] py-8;
+  @apply bg-white dark:bg-[#121212] dark:text-white py-8;
 }
 
 hr {
   @apply border-t border-gray-300 dark:border-gray-700 my-8;
+}
+
+html {
+  scroll-behavior: smooth;
 }

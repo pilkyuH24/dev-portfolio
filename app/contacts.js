@@ -16,18 +16,21 @@ export default function Contact() {
             iconSrc="/gmail-icon.svg"
             title="Email"
             link="mailto:pilkyuh24@gmail.com"
+            isGitHub={false}
           />
           {/* GitHub */}
           <ContactItem
-            iconSrc="/github-2.svg"
+            iconSrc="/github-icon-1.svg"
             title="GitHub"
             link="https://github.com/yourusername"
+            isGitHub={true}
           />
           {/* LinkedIn */}
           <ContactItem
             iconSrc="/linkedin-icon-2.svg"
             title="LinkedIn"
             link="https://linkedin.com/in/yourusername"
+            isGitHub={false}
           />
         </div>
       </div>
@@ -36,10 +39,16 @@ export default function Contact() {
 }
 
 // Reusable Contact Item Component
-function ContactItem({ iconSrc, title, link }) {
+function ContactItem({ iconSrc, title, link, isGitHub }) {
   return (
-    <div className="flex flex-col items-center justify-center border border-gray-200 dark:border-gray-700 p-8 rounded-lg bg-white dark:bg-gray-800 shadow-lg w-64 h-32">
-      <Image src={iconSrc} alt={title} width={48} height={48} className="mb-4" />
+    <div className="flex flex-col items-center justify-center border border-gray-200 dark:border-gray-700 p-8 rounded-lg bg-white dark:bg-transparent shadow-lg w-64 h-32">
+      <Image
+        src={iconSrc}
+        alt={title}
+        width={48}
+        height={48}
+        className={`mb-4 ${isGitHub ? 'dark:invert' : ''}`}
+      />
       <a
         href={link}
         target="_blank"

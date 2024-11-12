@@ -1,15 +1,15 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default async function Projects() {
   const DATABASE_ID = process.env.NOTION_DATABASE_ID;
   const TOKEN = process.env.NOTION_TOKEN;
 
   const option = {
-    method: 'POST',
+    method: "POST",
     headers: {
-      Accept: 'application/json',
-      'Notion-Version': '2022-06-28',
-      'Content-Type': 'application/json',
+      Accept: "application/json",
+      "Notion-Version": "2022-06-28",
+      "Content-Type": "application/json",
       Authorization: `Bearer ${TOKEN}`,
     },
     body: JSON.stringify({
@@ -23,7 +23,8 @@ export default async function Projects() {
       `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
       option
     );
-    if (!res.ok) throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
+    if (!res.ok)
+      throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
 
     const data = await res.json();
 
@@ -37,13 +38,13 @@ export default async function Projects() {
             <div
               key={project.id}
               className={`flex flex-col md:flex-row items-start text-left ${
-                index % 2 === 1 ? 'md:ml-16' : ''
+                index % 2 === 1 ? "md:ml-16" : ""
               }`}
             >
               {/* Left side: Image and Project Name */}
               <div
                 className={`md:w-1/3 mb-4 md:mb-0 ${
-                  index % 2 === 1 ? 'order-last md:order-first' : ''
+                  index % 2 === 1 ? "order-last md:order-first" : ""
                 }`}
               >
                 {project.cover?.external?.url ? (
@@ -71,11 +72,12 @@ export default async function Projects() {
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2">
                   {project.properties.Tag.multi_select.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="inline-block rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-3 py-1 text-sm"
+                      className="inline-block rounded-lg px-3 py-1 text-sm font-semibold text-white"
+                      style={{ backgroundColor: getTagColor(tag.name) }}
                     >
                       {tag.name}
                     </span>
@@ -103,4 +105,25 @@ export default async function Projects() {
     console.error("Error fetching projects:", error);
     return <h1 className="text-red-500">Error loading projects</h1>;
   }
+}
+
+/**
+ * Helper function to generate colors for tags
+ */
+function getTagColor(tagName) {
+  const colors = {
+    JavaScript: "#F7DF1E", // Yellow
+    React: "#61DAFB", // Light Blue
+    "Next.js": "#000000", // Black
+    TailwindCSS: "#38BDF8", // Sky Blue
+    Git: "#F05032", // Red-Orange
+    GitHub: "#181717", // Dark Gray
+    API: "#4CAF50", // Green
+    "Machine Learning": "#F06292", // Pink
+    "UI/UX": "#FFC107", // Amber
+    Python: "#306998", // Blue
+    TypeScript: "#3178C6", // Dark Blue
+  };
+
+  return colors[tagName] || "#9CA3AF"; // Default gray color if tag not found
 }

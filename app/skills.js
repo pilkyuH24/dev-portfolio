@@ -60,7 +60,7 @@ function SkillRow({ imageSrc, label, description, invertOnDark }) {
       </div>
       <div>
         <h2 className="text-2xl font-semibold">{label}</h2>
-        <p className="mt-2 text-xl px-4">{description}</p>
+        <p className="mt-2 text-xl px-4 dark:text-white">{description}</p>
       </div>
     </div>
   );
