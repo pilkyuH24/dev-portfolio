@@ -38,3 +38,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Fonts directory (Make sure this is not ignored)
+!public/fonts
+!public/fonts/*
+
