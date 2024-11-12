@@ -20,3 +20,6 @@ This project utilizes the following tools and technologies:
 - **Notion API**: Fetching project data dynamically from a Notion database.
 - **Dark Mode**: Implemented using the `next-themes` library.
 - **Lottie Animations**
+- **Dotenv**
+NOTION_TOKEN=
+NOTION_DATABASE_ID=
