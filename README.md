@@ -15,8 +15,8 @@ This portfolio is designed to provide an elegant and responsive user experience.
 ## 🔧 Technologies Used
 This project utilizes the following tools and technologies:
 
-- **Next.js**: A powerful React framework for building optimized and scalable web applications.
-- **Tailwind CSS**: Utility-first CSS framework for styling and responsive design.
+- **Next.js**
+- **Tailwind CSS**
 - **Notion API**: Fetching project data dynamically from a Notion database.
-- **Dark Mode**: Implemented using the `next-themes` library for a better user experience.
-- **Lottie Animations**: Engaging animations to enhance the visual appeal.
+- **Dark Mode**: Implemented using the `next-themes` library.
+- **Lottie Animations**
