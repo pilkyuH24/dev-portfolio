@@ -2,8 +2,8 @@ import Image from "next/image";
 
 // Notion API에서 프로젝트 데이터를 가져오는 함수
 async function fetchProjects() {
-  const DATABASE_ID = process.env.NOTION_DATABASE_ID;
-  const TOKEN = process.env.NOTION_TOKEN;
+  const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID;
+  const NOTION_TOKEN = process.env.NOTION_TOKEN;
 
   const option = {
     method: "POST",
@@ -11,7 +11,7 @@ async function fetchProjects() {
       Accept: "application/json",
       "Notion-Version": "2022-06-28",
       "Content-Type": "application/json",
-      Authorization: `Bearer ${TOKEN}`,
+      Authorization: `Bearer ${NOTION_TOKEN}`,
     },
     body: JSON.stringify({
       page_size: 100,
@@ -21,7 +21,7 @@ async function fetchProjects() {
 
   try {
     const res = await fetch(
-      `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
+      `https://api.notion.com/v1/databases/${NOTION_DATABASE_ID}/query`,
       option
     );
 
