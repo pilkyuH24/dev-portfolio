@@ -21,7 +21,7 @@ async function fetchProjects() {
 
   try {
     const res = await fetch(
-      `https://api.notion.com/v1/databases/${NODATABASE_ID}/query`,
+      `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
       option
     );
 
