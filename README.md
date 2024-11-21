@@ -27,3 +27,6 @@ Create a `.env` file in the root of your project and include the following:
 
 
 Make sure to replace `your_notion_token_here` and `your_database_id_here` with your actual Notion credentials.
+
+
+![Alt text](/dev_portfolio.png)

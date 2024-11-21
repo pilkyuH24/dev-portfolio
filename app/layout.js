@@ -6,6 +6,12 @@ import { ThemeProvider } from "next-themes";
 export const metadata = {
   title: "Pilkyu Han's Portfolio",
   description: "Portfolio Website Using Notion API",
+  icons: {
+		icon: "/diagram-06_24511.ico",
+		shortcut: "/home.png",
+		apple: "/home.png",
+	},
+  
 };
 
 export default function RootLayout({ children }) {
