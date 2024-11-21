@@ -26,7 +26,10 @@ async function fetchProjects() {
 
     if (!res.ok) {
       const errorDetails = await res.text();
-      console.error(`Failed to fetch: ${res.status} ${res.statusText}`, errorDetails);
+      console.error(
+        `Failed to fetch: ${res.status} ${res.statusText}`,
+        errorDetails
+      );
       throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
     }
 
@@ -59,27 +62,28 @@ export default async function Projects() {
           >
             {/* Left side: Image and Project Name */}
             <div
-              className={`md:w-1/3 mb-4 md:mb-0 ${
-                index % 2 === 1 ? "order-last md:order-first" : ""
-              }`}
-            >
-              {project.cover?.external?.url ? (
-                <Image
-                  src={project.cover.external.url}
-                  alt={project.properties.Name.title[0]?.text.content}
-                  width={400}
-                  height={300}
-                  className="w-full h-64 object-cover rounded-lg shadow-md"
-                />
-              ) : (
-                <div className="w-full h-64 bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 rounded-lg shadow-md">
-                  No Image
-                </div>
-              )}
-              <h2 className="text-2xl font-semibold mt-4 dark:text-white text-center">
-                {project.properties.Name.title[0]?.text.content}
-              </h2>
-            </div>
+  className={`md:w-1/3 mb-4 md:mb-0 ${
+    index % 2 === 1 ? "order-last md:order-first" : ""
+  }`}
+>
+  {project.cover?.external?.url || project.cover?.file?.url ? (
+    <Image
+      src={project.cover.external?.url || project.cover.file?.url}
+      alt={project.properties.Name.title[0]?.text.content}
+      width={400}
+      height={300}
+      className="w-full h-64 object-cover rounded-lg shadow-md"
+    />
+  ) : (
+    <div className="w-full h-64 bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 rounded-lg shadow-md">
+      No Image
+    </div>
+  )}
+  <h2 className="text-2xl font-semibold mt-4 dark:text-white text-center">
+    {project.properties.Name.title[0]?.text.content}
+  </h2>
+</div>
+
 
             {/* Right side: Project Details */}
             <div className="md:w-2/3 px-8 space-y-4">
@@ -102,14 +106,16 @@ export default async function Projects() {
 
               {/* GitHub link */}
               {project.properties.Github.url && (
-                <a
-                  href={project.properties.Github.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-600 dark:text-indigo-400 font-bold hover:underline"
-                >
-                  GitHub Link
-                </a>
+                <div className="mt-8">
+                  <a
+                    href={project.properties.Github.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-600 dark:text-indigo-400 font-bold hover:underline"
+                  >
+                    GitHub Link
+                  </a>
+                </div>
               )}
             </div>
           </div>
