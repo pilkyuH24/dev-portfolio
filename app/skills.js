@@ -38,7 +38,7 @@ export default function Skills() {
         <SkillRow 
           imageSrc="/postman.svg" 
           label="API Integration" 
-          description="Experienced in integrating APIs to connect frontend and backend services seamlessly."
+          description="Experienced in integrating APIs to connect frontend and backend services."
         />
       </div>
     </div>
