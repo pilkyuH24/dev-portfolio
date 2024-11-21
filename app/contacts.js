@@ -22,14 +22,14 @@ export default function Contact() {
           <ContactItem
             iconSrc="/github-icon-1.svg"
             title="GitHub"
-            link="https://github.com/yourusername"
+            link="https://github.com/pilkyuH24"
             isGitHub={true}
           />
           {/* LinkedIn */}
           <ContactItem
             iconSrc="/linkedin-icon-2.svg"
             title="LinkedIn"
-            link="https://linkedin.com/in/yourusername"
+            link="https://www.linkedin.com/in/pilkyu-han-1481122b6"
             isGitHub={false}
           />
         </div>

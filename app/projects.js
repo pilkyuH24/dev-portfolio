@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-// Notion API에서 프로젝트 데이터를 가져오는 함수
 async function fetchProjects() {
   const DATABASE_ID = process.env.NOTION_DATABASE_ID;
   const TOKEN = process.env.NOTION_TOKEN;
@@ -136,7 +135,8 @@ function getTagColor(tagName) {
     "UI/UX": "#FFC107",
     Python: "#306998",
     TypeScript: "#3178C6",
+    HTML: "#0010a3",
   };
 
-  return colors[tagName] || "#9CA3AF";
+  return colors[tagName] || "#634626";
 }
