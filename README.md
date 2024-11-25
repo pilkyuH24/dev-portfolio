@@ -2,7 +2,7 @@
 Welcome to my portfolio website! This project is a showcase of my work, skills, and experiences, built using modern web development technologies. The website leverages the Notion API to dynamically fetch and display project details, allowing for easy updates and content management.
 
 ## 🌟 Live Demo
-[Visit the website](#https://dev-portfolio-two-wheat.vercel.app/) 🌐
+[Visit the website](https://dev-portfolio-two-wheat.vercel.app/) 🌐
 
 ## 📚 Project Overview
 This portfolio is designed to provide an elegant and responsive user experience. The website features the following sections:
