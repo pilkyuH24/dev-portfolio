@@ -119,7 +119,7 @@ export default async function Projects() {
                 </div>
 
                 {/* GitHub link */}
-                {project.properties.Github.url && (
+                {project.properties.Github?.url && (
                   <div className="mt-8">
                     <a
                       href={project.properties.Github.url}
@@ -128,6 +128,19 @@ export default async function Projects() {
                       className="text-indigo-600 dark:text-indigo-400 font-bold hover:underline"
                     >
                       GitHub Link
+                    </a>
+                  </div>
+                )}
+                {/* Blog link */}
+                {project.properties.Blog?.url && (
+                  <div className="mt-8">
+                    <a
+                      href={project.properties.Blog.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-indigo-600 dark:text-indigo-400 font-bold hover:underline"
+                    >
+                      Blog Link
                     </a>
                   </div>
                 )}
