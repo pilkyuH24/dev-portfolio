@@ -14,7 +14,10 @@ async function fetchProjects() {
     },
     body: JSON.stringify({
       page_size: 100,
-      sorts: [{ property: "Name", direction: "ascending" }],
+      sorts: [
+        { property: "priority", direction: "descending" },
+        { property: "Name", direction: "ascending" },
+      ],
     }),
   };
 
@@ -54,8 +57,7 @@ export default async function Projects() {
 
       <div className="space-y-16 max-w-6xl mx-auto">
         {data.results?.map((project, index) => {
-          const demoUrl =
-            project.properties.demo.rich_text[0]?.href || null;
+          const demoUrl = project.properties.demo.rich_text[0]?.href || null;
           return (
             <div
               key={project.id}
@@ -77,7 +79,9 @@ export default async function Projects() {
                 >
                   {project.cover?.external?.url || project.cover?.file?.url ? (
                     <Image
-                      src={project.cover.external?.url || project.cover.file?.url}
+                      src={
+                        project.cover.external?.url || project.cover.file?.url
+                      }
                       alt={project.properties.Name.title[0]?.text.content}
                       width={400}
                       height={300}

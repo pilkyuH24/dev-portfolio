@@ -10,7 +10,7 @@ export default function Skills() {
         <SkillRow 
           imageSrc="/logo-javascript.svg" 
           label="Programming Languages" 
-          description="Experienced in C++, Python, and JavaScript for various types of applications and projects."
+          description="Experienced in C++, Python, JavaScript, and TypeScript for various types of applications and projects."
         />
 
         <Divider />
@@ -25,20 +25,20 @@ export default function Skills() {
 
         <Divider />
 
-        {/* Front-End Frameworks */}
+        {/* Full-Stack Development */}
         <SkillRow 
           imageSrc="/react-2.svg" 
-          label="Front-End Frameworks" 
-          description="Skilled in React and Next.js for building modern, responsive user interfaces."
+          label="Full-Stack Development" 
+          description="Skilled in React, Next.js for frontend, and Node.js, Express, PostgreSQL for backend development."
         />
 
         <Divider />
 
-        {/* API Integration */}
+        {/* AI & API Integration */}
         <SkillRow 
           imageSrc="/postman.svg" 
-          label="API Integration" 
-          description="Experienced in integrating APIs to connect frontend and backend services."
+          label="AI & API Integration" 
+          description="Experienced in database integration (PostgreSQL), AI API integration (OpenAI, Hugging Face), and API development."
         />
       </div>
     </div>
