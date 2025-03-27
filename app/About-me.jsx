@@ -44,7 +44,7 @@ export default function AboutMe() {
         <>
           {lang === "en" ? (
             <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-8 mt-14 font-zain">
-              Hello, I'm Pilkyu Han
+              Hello, I&apos;m Pilkyu Han
             </h1>
           ) : (
             <>
@@ -58,16 +58,15 @@ export default function AboutMe() {
           )}
         </>
         <p
-          className={` text-gray-700 dark:text-gray-300 leading-relaxed space-y-2 ${
-            lang === "en" ? "font-zain text-[1.4rem]" : "font-gowun text-xl"
-          }`}
+          className={` text-gray-700 dark:text-gray-300 leading-relaxed space-y-2 ${lang === "en" ? "font-zain text-[1.4rem]" : "font-gowun text-xl"
+            }`}
         >
           {lang === "en" ? (
             <>
-              I'm Pilkyu Han, a UC Berkeley graduate in Electrical Engineering
+              I&apos;m Pilkyu Han, a UC Berkeley graduate in Electrical Engineering
               and Computer Science. <br />I enjoy building intuitive and
-              meaningful applications that make people's lives a little easier.
-              I'm especially interested in projects that combine creativity with
+              meaningful applications that make people&apos;s lives a little easier.
+              I&apos;m especially interested in projects that combine creativity with
               technology.
             </>
           ) : (
