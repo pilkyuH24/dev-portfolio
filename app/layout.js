@@ -1,28 +1,30 @@
 import "./globals.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import { ThemeProvider } from "next-themes";
+import { LanguageProvider } from "./components/LanguageProvider"
+
 
 export const metadata = {
   title: "Pilkyu Han's Portfolio",
   description: "Portfolio Website Using Notion API",
   icons: {
-		icon: "/diagram-06_24511.ico",
-		shortcut: "/home.png",
-		apple: "/home.png",
-	},
-  
+    icon: "/favicon.ico",
+    shortcut: "/home.png",
+    apple: "/home.png",
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="font-sans bg-primary antialiased">
+      <body className="antialiased">
+      <LanguageProvider>
         <ThemeProvider attribute="class">
-          <Header />
           {children}
           <Footer />
         </ThemeProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

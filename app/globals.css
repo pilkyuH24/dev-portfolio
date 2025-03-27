@@ -2,91 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
-
-/* Global Font Setup */
-body {
-  font-family: 'Karla', sans-serif;
-}
-
-/* Karla Font Classes with Variable Weights */
-.karla-light {
-  font-family: 'Karla', sans-serif;
-  font-weight: 200;
-}
-
-.karla-regular {
-  font-family: 'Karla', sans-serif;
-  font-weight: 400;
-}
-
-.karla-bold {
-  font-family: 'Karla', sans-serif;
-  font-weight: 700;
-}
-
-.karla-extrabold {
-  font-family: 'Karla', sans-serif;
-  font-weight: 800;
-}
-
-.karla-italic {
-  font-family: 'Karla', sans-serif;
-  font-style: italic;
-}
-
-
-/* Import Local Fonts */
-@font-face {
-  font-family: 'Karla';
-  src: url('/fonts/Karla-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Karla';
-  src: url('/fonts/Karla-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Karla';
-  src: url('/fonts/Karla-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Karla';
-  src: url('/fonts/Karla-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
-}
-
-/* Global Font Setup */
-body {
-  font-family: 'Karla', sans-serif;
-  background-color: var(--background);
-  color: var(--foreground);
-  @apply antialiased;
-}
-
-/* Karla Font Classes */
-@font-face {
-  font-family: 'Karla';
-  src: url('/fonts/Karla-Regular.ttf') format('truetype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Karla';
-  src: url('/fonts/Karla-Bold.ttf') format('truetype');
-  font-weight: 700;
-}
-
-/* Dark Mode Variables */
+/* ✅ Root Theme Variables */
 :root {
   --background: white;
   --foreground: black;
@@ -97,13 +13,14 @@ body {
   --foreground: white;
 }
 
-/* Utility Classes */
-.bg-primary {
-  @apply bg-white dark:bg-[#121212];
-}
-
+/* Optional: override specific tags if needed */
 h1, h2, h3, h4, h5, h6 {
   @apply text-gray-900 dark:text-white;
+}
+
+/* ✅ Common Layout Classes */
+.bg-primary {
+  @apply bg-white dark:bg-[#121212];
 }
 
 .header {
@@ -118,6 +35,190 @@ hr {
   @apply border-t border-gray-300 dark:border-gray-700 my-8;
 }
 
-html {
-  scroll-behavior: smooth;
+
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%, 10% {
+    width: 0;
+  }
+  45%, 55% {
+    width: 11.4em;
+  }
+  95%, 100% {
+    width: 11.4em; /* */
+
+  }
+}
+
+.terminal-loader {
+  border: 0.1em solid #333;
+  background-color: #1a1a1a;
+  color: #0f0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  padding: 1.5em 1em;
+  width: 20em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.terminal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5em;
+  background-color: #333;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 0.4em;
+  box-sizing: border-box;
+}
+
+.terminal-controls {
+  float: right;
+}
+
+.control {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.4em;
+  border-radius: 50%;
+  background-color: #777;
+}
+.control.close { background-color: #e33; }
+.control.minimize { background-color: #ee0; }
+.control.maximize { background-color: #0b0; }
+
+.terminal-title {
+  float: left;
+  line-height: 1.5em;
+  color: #eee;
+}
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid green;
+  animation:
+    typeAndDelete 5s steps(20) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
+}
+
+.blogContainer{
+  @apply flex w-screen min-h-fit justify-center items-center mt-16
+}
+.blogBody {
+  @apply max-w-screen-lg min-h-screen mt-16 px-4 py-10 
+}
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'Gowun Dodum';
+  src: url('/fonts/Gowun_Dodum/GowunDodum-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('/fonts/Zain/Zain-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('/fonts/Zain/Zain-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('/fonts/Zain/Zain-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('/fonts/Zain/Zain-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('/fonts/Zain/Zain-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('/fonts/Zain/Zain-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Extra */
+
+@font-face {
+  font-family: 'Funnel Sans';
+  src: url('/fonts/Funnel_Sans/static/FunnelSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Funnel Sans';
+  src: url('/fonts/Funnel_Sans/static/FunnelSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Funnel Sans';
+  src: url('/fonts/Funnel_Sans/static/FunnelSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Funnel Sans';
+  src: url('/fonts/Funnel_Sans/static/FunnelSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Funnel Sans';
+  src: url('/fonts/Funnel_Sans/static/FunnelSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Funnel Sans';
+  src: url('/fonts/Funnel_Sans/static/FunnelSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
 }

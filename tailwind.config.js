@@ -3,7 +3,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Karla', 'sans-serif'],
+        funnel: ['"Funnel Sans"', 'sans-serif'],
+        gowun: ['"Gowun Dodum"', 'sans-serif'],
+        zain: ['"Zain"', 'sans-serif'],
       },
       colors: {
         primary: '#121212',
