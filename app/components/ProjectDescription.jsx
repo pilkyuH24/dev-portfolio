@@ -9,7 +9,7 @@ export default function ProjectDescription({ project }) {
   const descriptionText = descriptionField?.rich_text[0]?.text.content || '';
 
   return (
-    <p className={`text-gray-800 dark:text-gray-300 text-lg ${lang === "en" ? "font-zain text-[1.5rem]" : "font-gowun"}`}>
+    <p className={`text-gray-800 dark:text-gray-300 ${lang === "en" ? "font-zain text-2xl" : "font-gowun text-lg"}`}>
       {descriptionText}
     </p>
   );

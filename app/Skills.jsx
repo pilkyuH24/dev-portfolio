@@ -11,7 +11,7 @@ export default function Skills() {
 
   return (
     <div className="mt-12 p-8 text-center">
-      <h1 className={`text-4xl font-bold mb-8 ${lang === "en" ? "font-zain text-[1.4rem]" : "font-gowun"}`}>{t.skills}</h1>
+      <h1 className={`font-bold mb-8 ${lang === "en" ? "font-zain text-5xl" : "font-gowun text-4xl"}`}>{t.skills}</h1>
 
       <div className="space-y-6 max-w-4xl mx-auto">
         {/* Programming Languages */}
@@ -60,7 +60,7 @@ export default function Skills() {
 // Reusable Skill Row Component
 function SkillRow({ imageSrc, label, description, invertOnDark, lang }) {
   return (
-    <div className={`flex flex-col md:flex-row items-center md:items-start text-left px-6 py-8 mx-auto ${lang === "en" ? "font-zain text-[1.4rem]" : "font-gowun"}`}>
+    <div className={`flex flex-col md:flex-row items-center md:items-start text-left px-6 py-8 mx-auto ${lang === "en" ? "font-zain text-2xl" : "font-gowun text-xl"}`}>
       <div className="mb-4 md:mb-0 md:mr-6 flex-shrink-0">
         <Image 
           src={imageSrc} 

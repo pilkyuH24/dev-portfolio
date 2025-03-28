@@ -27,7 +27,7 @@ export default function ProjectsClient({ projects }) {
 
   return (
     <div className="p-8 text-center dark:text-gray-100 relative">
-      <h1 className= {`text-4xl font-bold mb-8 dark:text-white ${lang === "en" ? "font-zain text-[1.4rem]" : "font-gowun"}`}>{lang === "en" ? "Projects" : "프로젝트"}</h1>
+      <h1 className= {`font-bold mb-8 dark:text-white ${lang === "en" ? "font-zain text-5xl" : "font-gowun text-4xl"}`}>{lang === "en" ? "Projects" : "프로젝트"}</h1>
 
       {/* Loading animation overlaid */}
       {!reveal && (

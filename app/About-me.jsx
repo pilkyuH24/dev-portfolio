@@ -58,7 +58,7 @@ export default function AboutMe() {
           )}
         </>
         <p
-          className={` text-gray-700 dark:text-gray-300 leading-relaxed space-y-2 ${lang === "en" ? "font-zain text-[1.4rem]" : "font-gowun text-xl"
+          className={` text-gray-700 dark:text-gray-300 leading-relaxed space-y-2 ${lang === "en" ? "font-zain text-2xl" : "font-gowun text-xl"
             }`}
         >
           {lang === "en" ? (
