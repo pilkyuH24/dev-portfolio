@@ -27,11 +27,11 @@ const allContents = [
   {
     title: "프로젝트 개요",
     content: [
-      { header: "The Motivation App이란?" },   // section-0-1
-      { header: "핵심 기능 소개" },            // section-0-2
-      { header: "사용된 기술" },              // section-0-3
-      { header: "디렉토리 구조" },                 // section-0-4
-      { header: "API 구조" }                 // section-0-5
+      { header: "The Motivation App이란?" },         // section-0-0
+      { header: "주요 기능 및 기술 개요" },          // section-0-1
+      { header: "디렉토리 및 API 구조 요약" },       // section-0-2
+      { header: "전체 구조 아키텍처" },              // section-0-3
+      { header: "Flow 예시" }                        // section-0-4
     ]
   },
   {
