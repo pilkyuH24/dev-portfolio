@@ -12,13 +12,16 @@ export const metadata = {
     shortcut: "/home.png",
     apple: "/home.png",
   },
+  verification: {
+    google: 'DgBB-GYrEgXCd7mMHmUfwRETfed6yooaCUCE806G7gU',
+    
+  },
 };
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      
       <body className="antialiased">
       <LanguageProvider>
         <ThemeProvider attribute="class">
