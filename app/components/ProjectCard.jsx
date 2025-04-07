@@ -73,9 +73,10 @@ export default function ProjectCard({ project, index, onImageLoad }) {
           ))}
         </div>
 
+        <div className="flex flex-row mt-8 float-start gap-4">
         {/* GitHub */}
         {project.properties.Github?.url && (
-          <div className="mt-8">
+          <div className="">
             <a
               href={project.properties.Github.url}
               target="_blank"
@@ -89,17 +90,18 @@ export default function ProjectCard({ project, index, onImageLoad }) {
 
         {/* Blog */}
         {project.properties.Blog?.url && (
-          <div className="mt-8">
+          <div className="">
             <a
               href={project.properties.Blog.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-indigo-600 dark:text-indigo-400 font-bold hover:underline"
+              className="font-zain text-xl text-pink-600 dark:text-pink-400 font-bold hover:underline"
             >
               Blog Link
             </a>
           </div>
         )}
+        </div>
       </div>
     </div>
   );
