@@ -116,13 +116,24 @@ hr {
   margin-top: 1.5em;
 }
 
-.blogContainer{
-  @apply flex w-screen min-h-fit justify-center items-center mt-16
-}
-.blogBody {
-  @apply max-w-screen-lg min-h-screen mt-16 px-4 py-10 
+.blogContainer {
+  @apply flex w-full min-h-fit justify-start items-center mt-0 sm:mt-16;
+  /* position: relative; */
 }
 
+.blogBody {
+  @apply max-w-screen-lg min-h-screen ml-10 mt-0 pr-4 py-10 mr-12;
+}
+
+.blog-section {
+  scroll-margin-top: 120px;
+}
+
+@media (max-width: 1023px) {
+  .blogBody {
+    @apply w-full pr-8;
+  }
+}
 
 
 

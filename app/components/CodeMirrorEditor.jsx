@@ -40,5 +40,5 @@ export default function CodeMirrorEditor({ code = '' }) {
     };
   }, [theme]);
 
-  return <div ref={editorRef} style={{ height: '300px', marginTop: '20px'}} />;
+  return <div ref={editorRef} style={{ marginTop: '20px'}} />;
 }
