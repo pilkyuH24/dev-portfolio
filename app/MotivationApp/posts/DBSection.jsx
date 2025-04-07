@@ -116,7 +116,7 @@ model UserMissionLog {
             <section id="section-2-4" className="mb-12 scroll-mt-24">
   <h3 className="text-xl font-bold mb-2 font-gowun underline decoration-sky-500">데이터베이스 설계 의도 및 반복 구조 처리</h3>
   <p className="text-lg text-gray-900 dark:text-gray-200 font-gowun mb-4">
-    본 프로젝트의 핵심 기능 중 하나는 "반복적인 미션 수행 여부"를 일 단위로 추적하는 것입니다. 이를 위해 <strong>매일의 수행 상태를 저장하는 로그 테이블 <code>UserMissionLog</code></strong>를 별도로 설계하였습니다.
+    본 프로젝트의 핵심 기능 중 하나는 &quot;반복적인 미션 수행 여부&quot;를 일 단위로 추적하는 것입니다. 이를 위해 <strong>매일의 수행 상태를 저장하는 로그 테이블 <code>UserMissionLog</code></strong>를 별도로 설계하였습니다.
   </p>
 
   <p className="text-lg text-gray-900 dark:text-gray-200 font-gowun mb-4">
