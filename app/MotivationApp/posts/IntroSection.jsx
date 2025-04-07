@@ -10,7 +10,6 @@ export default function IntroSection() {
           The Motivation App은 사용자가 자신의 목표(미션)를 설정하고 
           </p>
         <p className="text-lg text-gray-900 dark:text-gray-200 font-gowun">
-          
           이를 일일 단위로 관리할 수 있도록 도와주는 미션 관리 웹 애플리케이션입니다.
         </p>
       </section>
