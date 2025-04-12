@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://motiv-app-ivory.vercel.app
+
+# Sitemaps
+Sitemap: https://motiv-app-ivory.vercel.app/sitemap.xml

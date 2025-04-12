@@ -16,11 +16,17 @@ const TableOfContents = ({
     setIsOpen(!isOpen);
   };
   
-  const toggleTitle = (title) => {
+  const toggleTitle = (contentIndex, title) => {
+    // Toggle expansion state
     if (expandedTitles.includes(title)) {
       setExpandedTitles(expandedTitles.filter(t => t !== title));
     } else {
       setExpandedTitles([...expandedTitles, title]);
+    }
+    
+    // Also scroll to the first section of this title
+    if (sections[contentIndex]?.content?.length > 0) {
+      handleScrollToSection(contentIndex, 0);
     }
   };
 
@@ -35,7 +41,7 @@ const TableOfContents = ({
     return sections.map((content, contentIndex) => (
       <li key={contentIndex} className="mb-2">
         <div 
-          onClick={() => toggleTitle(content.title)}
+          onClick={() => toggleTitle(contentIndex, content.title)}
           className="flex items-center justify-between cursor-pointer hover:text-blue-500 dark:hover:text-blue-400"
         >
           <span className="font-bold text-gray-900 dark:text-gray-300">
