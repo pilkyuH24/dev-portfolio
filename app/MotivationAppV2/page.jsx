@@ -11,15 +11,15 @@ import dynamic from 'next/dynamic';
 import TableOfContents from '../components/TableOfContents';
 import { useState, useEffect } from 'react';
 
-import IntroSectionV2 from './postV2/IntroSectionV2';
-import AuthSectionV2 from './postV2/AuthSectionV2';
-import DBSectionV2 from './postV2/DBSectionV2';
-import DashboardSectionV2 from './postV2/DashboardSectionV2';
-import CalendarSectionV2 from './postV2/CalendarSectionV2';
-import MissionsSectionV2 from './postV2/MissionsSectionV2';
-import ProfileSectionV2 from './postV2/ProfileSectionV2';
-import CacheSectionV2 from './postV2/CacheSectionV2';
-import EpilogueV2 from './postV2/EpilogueV2';
+import IntroSectionV2 from './postv2/IntroSectionV2';
+import AuthSectionV2 from './postv2/AuthSectionV2';
+import DBSectionV2 from './postv2/DBSectionV2';
+import DashboardSectionV2 from './postv2/DashboardSectionV2';
+import CalendarSectionV2 from './postv2/CalendarSectionV2';
+import MissionsSectionV2 from './postv2/MissionsSectionV2';
+import ProfileSectionV2 from './postv2/ProfileSectionV2';
+import CacheSectionV2 from './postv2/CacheSectionV2';
+import EpilogueV2 from './postv2/EpilogueV2';
 
 
 
